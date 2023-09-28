@@ -8,17 +8,16 @@
         <link rel="stylesheet" href="css/style.css"/>
     </head>
 
-
-
     <body>
-
 
       <h1>Weather app</h1>
       <button id="dark-mode-toggle">Toggle Light/Dark Mode</button>
+
+
       <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Please insert your zipcode" aria-label="zipcode" aria-describedby="basic-addon2">
+          <input id="searchBar" type="text" class="form-control" placeholder="Please insert your zipcode" aria-label="zipcode" aria-describedby="basic-addon2">
           <div class="input-group-append">
-            <button class="btn btn-outline-secondary" type="button">Get Weather</button>
+            <button id="searchBtn" class="btn btn-outline-secondary" type="button">Get Weather</button>
           </div>
         </div>
   
@@ -29,41 +28,43 @@
 
       <div class="card" style="width: 18rem;">
         <div class="card-header">
-          City
+          Location
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">An item</li>
+          <li class="list-group-item" id="location">An item</li>
         </ul>
       </div>
 
-      <div class="card" style="width: 18rem;">
-        <div class="card-header">
+      <div  class="card" style="width: 18rem;">
+        <div class="card-header" >
           Temperature
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">An item</li>
+          <li class="list-group-item" id="temperature">An item</li>
         </ul>
       </div>
 
-      <div class="card" style="width: 18rem;">
+      <div  class="card" style="width: 18rem;">
         <div class="card-header">
           Condition
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">An item</li>
+          <li class="list-group-item" id= "condition">An item</li>
         </ul>
       </div>
 
+
+
+      <!-- image card -->
       <div class="card" style="width: 18rem;">
-        <div class="card-header">
-          Image
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
         </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">An item</li>
-        </ul>
+        <img src="img/1161797901.jpg" class="card-img-bottom" alt="...">
       </div>
+      
 
-        
+
         <!-- integrations -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"

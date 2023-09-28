@@ -19,7 +19,7 @@ make the object to make everything in the dotted lines
 
 
 
-use an async function to getWeather(zip)
+use an async function to getWeather(location
 declare the api key
 declare the api url
 
