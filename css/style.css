@@ -1,14 +1,32 @@
 /* light mode */
-body {
+body.light-mode {
     background-color: #ffffff;
     color: #000000;
 }
+
+
+
 
 /* dark mode */
 body.dark-mode {
     background-color:#18191A;
     color: #ffffff;
-
-    
 }
 
+body.dark-mode .card-text {
+    color: white;
+}
+
+body.dark {
+    background-color: black;
+    color: white;
+}
+
+body.dark .card-reader {
+    background-color: black;
+    color: white;
+}
+
+body.dark .card-text {
+    color: white;
+}

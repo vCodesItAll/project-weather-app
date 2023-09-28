@@ -62,3 +62,8 @@ searchBtn.addEventListener("click", () => {
         console.log(error);
     });
 });
+
+document.getElementById('dark-mode-toggle').addEventListener('click', () => {
+    const html = document.documentElement;
+    html.dataset.bsTheme = html.dataset.bsTheme === 'dark' ? 'light' : 'dark';
+  });
