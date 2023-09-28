@@ -42,7 +42,7 @@ function updateUI (weatherData) {
     condition.textContent = weatherData.condition;
     location.textContent = weatherData.location;
 
-    if (condition == "Clouds" ){
+    if (condition === "Clouds" ){
         image.src = "img/1161797901.jpg";
     }
 
