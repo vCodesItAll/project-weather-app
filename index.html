@@ -14,6 +14,7 @@
 
 
       <h1>Weather app</h1>
+      <button id="dark-mode-toggle">Toggle Light/Dark Mode</button>
       <div class="input-group mb-3">
           <input type="text" class="form-control" placeholder="Please insert your zipcode" aria-label="zipcode" aria-describedby="basic-addon2">
           <div class="input-group-append">
@@ -28,7 +29,7 @@
 
       <div class="card" style="width: 18rem;">
         <div class="card-header">
-          Featured
+          City
         </div>
         <ul class="list-group list-group-flush">
           <li class="list-group-item">An item</li>
@@ -37,7 +38,7 @@
 
       <div class="card" style="width: 18rem;">
         <div class="card-header">
-          Featured
+          Temperature
         </div>
         <ul class="list-group list-group-flush">
           <li class="list-group-item">An item</li>
@@ -46,7 +47,7 @@
 
       <div class="card" style="width: 18rem;">
         <div class="card-header">
-          Featured
+          Condition
         </div>
         <ul class="list-group list-group-flush">
           <li class="list-group-item">An item</li>
@@ -55,7 +56,7 @@
 
       <div class="card" style="width: 18rem;">
         <div class="card-header">
-          Featured
+          Image
         </div>
         <ul class="list-group list-group-flush">
           <li class="list-group-item">An item</li>
@@ -75,4 +76,11 @@
         crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
         <script defer src="./js/main.js"></script>
+
+        <script>
+          document.getElementById('dark-mode-toggle').addEventListener('click', () => {
+            const html = document.documentElement;
+            html.dataset.bsTheme = html.dataset.bsTheme === 'dark' ? 'light' : 'dark';
+          });
+        </script>
     </body>

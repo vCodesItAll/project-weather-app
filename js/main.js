@@ -1,3 +1,14 @@
+// dark mode toggle
+const toggleDarkMode = () => {
+    const body = document.body;
+    body.classList.toggle('dark-mode');
+};
+
+const darkModeBtn = document.getElementById("dark-mode-toggle");
+darkModeBtn.addEventListener("click, toggleDarkMode");
+
+
+
 async function  getWeatherData(location) {
     const apiKey = "31f871294bef6e71e10ee3a0e34ee522";
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=${apiKey}`;
