@@ -15,3 +15,4 @@ async function test_axios(){
     const result = await axios.get(api_url);
     console.log(result);
 }
+
