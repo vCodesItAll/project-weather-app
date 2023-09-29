@@ -1,7 +1,12 @@
 // dark mode toggle
 const toggleDarkMode = () => {
     const body = document.body;
+    const cardHeaders = document.querySelectorAll('.card-header');
     body.classList.toggle('dark-mode');
+    cardHeaders.forEach(header => {
+        header.classList.toggle('bg-dark');
+        header.classList.toggle('text-white');
+    });
 };
 
 const darkModeBtn = document.getElementById("dark-mode-toggle");
@@ -26,10 +31,7 @@ async function  getWeatherData(location) {
         console.log (error);
         throw error;
     }
-    }
-
-    
-
+}
 
 
 function updateUI (weatherData) {
@@ -45,8 +47,6 @@ function updateUI (weatherData) {
     if (condition === "Clouds" ){
         image.src = "img/1161797901.jpg";
     }
-
-    // 
 }
 
 const searchBtn = document.getElementById("searchBtn");
@@ -67,3 +67,5 @@ document.getElementById('dark-mode-toggle').addEventListener('click', () => {
     const html = document.documentElement;
     html.dataset.bsTheme = html.dataset.bsTheme === 'dark' ? 'light' : 'dark';
   });
+
+  
