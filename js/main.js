@@ -91,17 +91,49 @@ function updateUI (weatherData) {
 
         if (weatherData.condition === "Clouds") {
             image.src = "img/1161797901.jpg";
-        }
+        } else if (weatherData.condition === "Mist") {
+            image.src = "img/Picsart_23-09-28_13-46-07-835.jpg";
+        } else if (weatherData.condition === "Clear") {
+            image.src = "img/Picsart_23-09-28_13-45-42-618.jpg";
+        } else if (weatherData.condition === "Tornado") {
+            image.src = "img/Picsart_23-09-28_13-46-07-835.jpg";
+        } else if (weatherData.condition === "Squall") {
+            image.src = "img/Picsart_23-09-28_13-46-07-835.jpg";
+        } else if (weatherData.condition === "Ash") {
+            image.src = "img/Picsart_23-09-28_13-46-07-835.jpg";
+        } else if (weatherData.condition === "Dust") {
+            image.src = "img/Picsart_23-09-28_13-46-07-835.jpg";
+        } else if (weatherData.condition === "Sand") {
+            image.src = "img/Picsart_23-09-28_13-46-07-835.jpg";
+        } else if (weatherData.condition === "Fog") {
+            image.src = "img/Picsart_23-09-28_13-46-07-835.jpg";
+        } else if (weatherData.condition === "Haze") {
+            image.src = "img/Picsart_23-09-28_13-46-07-835.jpg";
+        } else if (weatherData.condition === "smoke") {
+            image.src = "img/Picsart_23-09-28_13-46-07-835.jpg";
+        } else if (weatherData.condition === "Mist") {
+            image.src = "img/Picsart_23-09-28_13-46-07-835.jpg";
+        } else if (weatherData.condition === "Snow") {
+            image.src = "img/Picsart_23-09-28_13-44-55-194.jpg";
+        } else if (weatherData.condition === "Rain") {
+            image.src = "img/Picsart_23-09-28_13-44-25-843.jpg";
+        } else if (weatherData.condition === "Drizzle") {
+            image.src = "img/Picsart_23-09-28_13-44-25-843.jpg";
+        } else if (weatherData.condition === "Thunderstorm") {
+            image.src = "img/Picsart_23-09-28_13-46-07-835.jpg";
+
+        }       
         alert.style.display = "none";
 
         const cardContainer = document.getElementById("cardContainer");
-        cardContainer.style.display = "block";
-    }
+        cardContainer.style.display = "block"
+    
+}
 }
    
 const searchBtn = document.getElementById("searchBtn");
 const searchBar = document.getElementById("searchBar");
-const alert = document.querySelector(".alert");
+// const alert = document.querySelector(".alert");
 
 searchBtn.addEventListener("click", () => {
     const location = searchBar.value;
@@ -122,4 +154,3 @@ document.getElementById('dark-mode-toggle').addEventListener('click', () => {
     html.dataset.bsTheme = html.dataset.bsTheme === 'dark' ? 'light' : 'dark';
   });
 
-  
