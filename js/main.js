@@ -62,7 +62,12 @@ function updateUI (weatherData) {
     if (weatherData === null) {
         alert.style.display = "block";
     } else {
-        temperature.textContent = `${weatherData.temperature}°C`;
+
+        const celsius = `${weatherData.temperature}°C`;
+        const fahrenheit = `${(weatherData.temperature * 9/5 + 32).toFixed(2)}°F`;
+        const kelvin = `${(weatherData.temperature + 273.15).toFixed(2) }K`;
+
+        temperature.textContent = `${celsius} | ${fahrenheit} | ${kelvin}`;
         condition.textContent = weatherData.condition;
         location.textContent = weatherData.location;
 
@@ -73,7 +78,6 @@ function updateUI (weatherData) {
     }
 }
    
-
 const searchBtn = document.getElementById("searchBtn");
 const searchBar = document.getElementById("searchBar");
 const alert = document.querySelector(".alert");
