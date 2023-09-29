@@ -28,3 +28,12 @@ body.dark .card-reader {
 body.dark .card-text {
     color: black;
 }
+
+.dark-mode-card {
+    background-color: #18191A;
+    color: white;
+}
+
+.white-text {
+    color:white;
+}
