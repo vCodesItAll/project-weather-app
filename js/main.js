@@ -71,6 +71,24 @@ function updateUI (weatherData) {
         condition.textContent = weatherData.condition;
         location.textContent = weatherData.location;
 
+        const conditionImages = {
+            "Clear": "img/Picsart_23-09-28_13-45-42-618.jpg",
+            "Clouds": "img/Picsart_23-09-28_13-46-07-835.jpg",
+            "Tornado": "img/Picsart_23-09-28_13-46-07-835.jpg",
+            "Squall":  "img/Picsart_23-09-28_13-46-07-835.jpg",
+            "Ash": "img/Picsart_23-09-28_13-46-07-835.jpg",
+            "Dust": "img/Picsart_23-09-28_13-46-07-835.jpg",
+            "Sand": "img/Picsart_23-09-28_13-46-07-835.jpg", 
+            "Fog": "img/Picsart_23-09-28_13-46-07-835.jpg", 
+            "Haze": "img/Picsart_23-09-28_13-46-07-835.jpg", 
+            "smoke": "img/Picsart_23-09-28_13-46-07-835.jpg", 
+            "Mist": "img/Picsart_23-09-28_13-46-07-835.jpg", 
+            "Snow": "img/Picsart_23-09-28_13-44-55-194.jpg",
+            "Rain": "img/Picsart_23-09-28_13-44-25-843.jpg",
+            "Drizzle": "img/Picsart_23-09-28_13-44-25-843.jpg",
+            "Thunderstorm": "img/Picsart_23-09-28_13-46-07-835.jpg", 
+        }
+
         if (weatherData.condition === "Clouds") {
             image.src = "img/1161797901.jpg";
         }

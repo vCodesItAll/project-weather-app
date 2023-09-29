@@ -37,3 +37,21 @@ body.dark .card-text {
 .white-text {
     color:white;
 }
+
+#dark-mode-toggle {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#searchBar {
+    width: 50%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
