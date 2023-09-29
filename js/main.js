@@ -12,6 +12,20 @@ const toggleDarkMode = () => {
 const darkModeBtn = document.getElementById("dark-mode-toggle");
 darkModeBtn.addEventListener("click", toggleDarkMode);
 
+const initializeDarkMode = () => {
+    const body = document.body;
+    const cardHeaders = document.querySelectorAll('.card-header');
+    const isDarkMode = body.classList.contains('dark-mode');
+    cardHeaders.forEach(header => {
+        if (isDarkMode) {
+            header.classList.add('bg-dark','text-white');
+        } else {
+            header.classList.remove('bg-dark','text-white');
+        }
+    });
+};
+
+window.addEventListener('load',initializeDarkMode);
 
 async function  getWeatherData(location) {
     const apiKey = "31f871294bef6e71e10ee3a0e34ee522";
