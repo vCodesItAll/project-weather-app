@@ -34,13 +34,17 @@ async function  getWeatherData(location) {
     try {
         const response = await axios.get(url);
         const data = response.data;
-        const weatherData = {
-            temperature: data.main.temp,
-            condition:data.weather[0].main,
-            location:data.name,
-        };
+        if (data.name) {
+            const weatherData = {
+                temperature: data.main.temp,
+                condition:data.weather[0].main,
+                location:data.name,
+            };
         console.log(data);
         return weatherData;
+        } else {
+            return null;
+        }
     } catch (error) {
         console.log (error);
         throw error;
@@ -53,8 +57,11 @@ function updateUI (weatherData) {
     const condition = document.getElementById("condition");
     const location = document.getElementById("location");
     const image = document.getElementById("image");
+    const alert = document.querySelector(".alert");
 
-    if (weatherData) {
+    if (weatherData === null) {
+        alert.style.display = "block";
+    } else {
         temperature.textContent = `${weatherData.temperature}°C`;
         condition.textContent = weatherData.condition;
         location.textContent = weatherData.location;
@@ -62,17 +69,10 @@ function updateUI (weatherData) {
         if (weatherData.condition === "Clouds") {
             image.src = "img/1161797901.jpg";
         }
-    } else {
-        const alert = document.querySelector(".alert");
-        alert.style.display = "block";
+        alert.style.display = "none";
     }
-
-    temperature.textContent = `${weatherData.temperature}°C`;
-    condition.textContent = weatherData.condition;
-    location.textContent = weatherData.location;
-
-    
 }
+   
 
 const searchBtn = document.getElementById("searchBtn");
 const searchBar = document.getElementById("searchBar");
@@ -82,6 +82,8 @@ searchBtn.addEventListener("click", () => {
     const location = searchBar.value;
     getWeatherData(location)
     .then(weatherData => {
+        const isValidZipCode = weatherData && weatherData.location;
+        weatherData.validZipCode = isValidZipCode;
         updateUI(weatherData);
     })
     .catch(error => {
