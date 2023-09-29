@@ -54,17 +54,29 @@ function updateUI (weatherData) {
     const location = document.getElementById("location");
     const image = document.getElementById("image");
 
+    if (weatherData) {
+        temperature.textContent = `${weatherData.temperature}°C`;
+        condition.textContent = weatherData.condition;
+        location.textContent = weatherData.location;
+
+        if (weatherData.condition === "Clouds") {
+            image.src = "img/1161797901.jpg";
+        }
+    } else {
+        const alert = document.querySelector(".alert");
+        alert.style.display = "block";
+    }
+
     temperature.textContent = `${weatherData.temperature}°C`;
     condition.textContent = weatherData.condition;
     location.textContent = weatherData.location;
 
-    if (condition === "Clouds" ){
-        image.src = "img/1161797901.jpg";
-    }
+    
 }
 
 const searchBtn = document.getElementById("searchBtn");
 const searchBar = document.getElementById("searchBar");
+const alert = document.querySelector(".alert");
 
 searchBtn.addEventListener("click", () => {
     const location = searchBar.value;
@@ -74,6 +86,7 @@ searchBtn.addEventListener("click", () => {
     })
     .catch(error => {
         console.log(error);
+        updateUI(null);
     });
 });
 
