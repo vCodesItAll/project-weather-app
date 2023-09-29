@@ -93,6 +93,9 @@ function updateUI (weatherData) {
             image.src = "img/1161797901.jpg";
         }
         alert.style.display = "none";
+
+        const cardContainer = document.getElementById("cardContainer");
+        cardContainer.style.display = "block";
     }
 }
    

@@ -55,3 +55,7 @@ body.dark .card-text {
     justify-content: center;
     min-height: 100vh;
 }
+
+.card-container {
+    display: none;
+}
