@@ -40,13 +40,11 @@ async function getWeatherData(location) {
         condition: data.weather[0].main,
         location: data.name,
       };
-      console.log(data);
       return weatherData;
     } else {
       return null;
     }
   } catch (error) {
-    console.log(error);
     throw error;
   }
 }
@@ -133,7 +131,6 @@ const weatherSearch = document.getElementById("weatherSearchForm");
 const searchBar = document.getElementById("searchBar");
 
 weatherSearch.addEventListener("submit", (event) => {
-  console.log("fired");
   event.preventDefault();
   const location = searchBar.value;
   getWeatherData(location)
@@ -143,7 +140,6 @@ weatherSearch.addEventListener("submit", (event) => {
       updateUI(weatherData);
     })
     .catch((error) => {
-      console.log(error);
       updateUI(null);
     });
 });
